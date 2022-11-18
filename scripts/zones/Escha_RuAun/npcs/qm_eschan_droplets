@@ -1,0 +1,26 @@
+-----------------------------------
+-- Area: Escha - Ru'Aun
+--  NPC: ??? (Eschan Droplets)
+-----------------------------------
+ID = require("scripts/zones/Escha_RuAun/IDs")
+require("scripts/globals/npc_util")
+require("scripts/globals/items")
+require("scripts/globals/utils")
+-----------------------------------
+local entity = {}
+
+entity.onTrade = function(player, npc, trade)
+end
+
+entity.onTrigger = function(player, npc)
+    player:addItem(9148)
+    player:messageName(ID.text.ITEM_OBTAINED, 9148)
+end
+
+entity.onEventUpdate = function(player, csid, option)
+end
+
+entity.onEventFinish = function(player, csid, option)
+end
+
+return entity
